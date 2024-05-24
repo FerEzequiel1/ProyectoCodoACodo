@@ -1,0 +1,492 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body, html{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}  
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: rgb(0, 112, 240);
+}
+
+div.conteiner{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1080;   
+}
+
+header img{
+    width: 16rem; 
+    height: 80%; 
+}
+
+header nav{
+    margin-right: 1rem; 
+    position: absolute;
+    left: 30%;  
+}
+
+
+
+header nav ul{
+   display: flex;
+   gap: 2rem; 
+   align-items: center;
+   justify-content: center;
+   width: 100%; 
+   height: 100%; 
+  
+}
+
+header nav ul li a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: aliceblue;
+    display: inline-block;    
+}
+
+
+header nav ul li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a{
+    position: relative;
+    text-align: left;
+}
+
+
+
+/* menu hamburguesa */
+
+header div.conteiner{
+    place-content: flex-start;
+}
+
+header div.conteiner nav{
+    width: 70%;
+    display: flex;
+    place-content: space-between;
+}
+
+#menu, #menu-check{
+    display: none;
+}
+
+
+
+@media only screen and (max-width:900px){
+    header div.conteiner, header div.container ul, header div.container ul li{
+        display: inline;
+    }
+
+    header div.conteiner nav{
+        width: 100%;
+        display: inline;
+    }  
+}
+
+@media only screen and (max-width:800px){
+    header h1{
+        margin: 0;
+    }
+
+    header h1 a{
+        padding: 0;
+    }
+
+    header div.conteiner{
+        display: flex;
+        place-content: space-between;
+    }
+
+    #menu-check:not(:checked)~ nav{
+        display: none;
+    }
+
+    #menu-check:checked ~ nav{
+        display: block;
+    }
+
+    #menu{
+        display: block;
+        color:black;
+        background-color: white;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid transparent;
+        border-radius: 0.3em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        z-index: 9999;
+    }
+
+    #menu:hover{
+        color: white;
+        background: black;
+    }
+
+    #menu-cerrar{
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-abrir{
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar{
+        display: block;
+    }
+
+    header div.conteiner nav{
+        position: absolute;
+        top: 0;
+        right: 40px;
+        width: 0 auto;
+        height: 100%;
+        background-color:black; 
+        padding-top: 0;
+        padding-right: 1.5em;
+        font-size: 1em;
+        color: white; 
+       
+    
+       
+    }
+
+    header div.conteiner nav ul a{
+        color:white;
+        background: none;
+    }
+
+    a{
+        position: relative;
+        right: 70px;
+        margin: 0;
+        padding-top: 20px; 
+       
+        
+    }
+
+    header div.conteiner nav ul, header div.conteiner nav ul li{
+        display: block;
+        position: relative;
+        text-align: center;  
+    }
+
+} 
+
+
+.contpresentacion{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: stretch;
+    align-items:center;       
+}
+
+/* Animacion */
+
+.fotos{
+    width: 1500px;
+    height: 500px;
+    background-repeat: no-repeat;
+   
+
+    animation-name: variar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: alternate;
+    animation-timing-function: linear; 
+}
+
+.fotos:hover{
+    animation-play-state: paused;
+}
+
+@keyframes variar{
+    0%{
+        width: 1500px;
+        height: 500px;
+        background-image: url('../img/portada-anim.jpg')
+    }
+    50%{
+        width:1500px;
+        height: 500px;
+        background-image: url('../img/pesas-anim.jpg')
+    }
+    100%{
+        width: 1500px;
+        height: 500px;
+        background-image: url('../img/contacto\ color.jpg')
+    }    
+}  
+
+@media only screen and (max-width:800px){
+    .fotos{
+        width: 800px;
+        height: 400px;
+        background-repeat: no-repeat;
+       
+    
+        animation-name: variar;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-direction: alternate;
+        animation-timing-function: linear; 
+    }
+    
+    .fotos:hover{
+        animation-play-state: paused;
+    }
+    
+    @keyframes variar{
+        0%{
+            width: 800px;
+            height: 400px;
+            background-image: url('../img/portada-anim.jpg')
+        }
+        50%{
+            width:800px;
+            height: 400px;
+            background-image: url('../img/pesas-anim.jpg')
+        }
+        100%{
+            width: 800px;
+            height: 400px;
+            background-image: url('../img/contacto\ color.jpg')
+        }    
+    }  
+    
+}
+
+@media only screen and (max-width:425px){
+    .fotos{
+        width: 425px;
+        height: 400px;
+        
+        background-repeat: no-repeat;
+       
+    
+        animation-name: variar;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-direction: alternate;
+        animation-timing-function: linear; 
+    }
+    
+    .fotos:hover{
+        animation-play-state: paused;
+    }
+    
+    @keyframes variar{
+        0%{
+            width: 425px;
+            height: 400px;
+            background-image: url('../img/portada-anim.jpg')
+            
+        }
+        50%{
+            width:425px;
+            height: 400px;
+            background-image: url('../img/pesas-anim.jpg')
+        }
+        100%{
+            width: 425px;
+            height: 400px;
+            background-image: url('../img/contacto\ color.jpg')
+        } 
+    }  
+}
+    
+
+
+/* formulario */
+
+@font-face {
+    font-family:"Arimo-Italic" ;
+    src: url(../../assets/font/aritmo/Arimo-Italic.ttf);
+
+    font-family:"Roboto-Regular" ;
+    src: url(../../assets/font/roboto/Roboto-Regular.ttf);
+}
+
+.contenedor{
+    position: relative;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    background-color: burlywood;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+.titulo{
+    margin: 10px;    
+}
+
+h1{
+    font-size: 2.8rem ;
+    font-family:"Arimo-Italic"; 
+    color: black;    
+}
+
+.datospers{
+    width:auto ;
+    height: 60px;  
+}
+
+.dato_label{
+    margin-right: 30px;
+    font-size: 20px;
+    font-family: "Roboto-Regular";       
+}    
+
+.dato_input{
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    background: white; 
+    border: 3px solid transparent;
+    transition: .3s ease all;  
+}
+
+.dato_input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	
+}
+
+
+.datospers-correcto {
+    color: black;
+}
+
+.datospers-incorrecto {
+    color: red;
+}
+
+.datospers-incorrecto .dato_input {
+	border: 3px solid red;
+}
+
+.subtitulo{
+    margin: 10px;
+    padding: 10px;   
+}
+
+h2{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+
+.opcsub{
+    margin: 0;
+    height: 10px; 
+}  
+
+
+
+.form-label{
+    margin-right: 30px;
+    font-size: 18px;
+}
+
+.sedes{
+    margin: 20px;
+    height: 30px;
+}
+
+.subtLabel{
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.desplegar{
+    width: 180px;
+    height: 20px;  
+}
+
+.formLabel{
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.consulta{
+    margin:10px;
+    padding: 10px;   
+}
+.archivo{
+    margin-bottom: 10px;   
+}
+
+.formulario__mensaje,
+.buttom {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+    margin: 0;
+    padding: 0 15px;
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	border-radius: 3px;
+    text-align: center;
+	display: none;
+} 
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.buttom input{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+}
+ 
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: blue;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+@media only screen and (max-width:1440px){
+
+}
+

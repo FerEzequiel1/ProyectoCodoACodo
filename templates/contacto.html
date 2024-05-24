@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width==device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/contacto.css">
+    <title>SportClub Contacto</title>
+</head>
+<body>
+    <header>
+        <div class="conteiner">
+            <img src="https://empresas.sportclub.com.ar/_next/static/media/logo-sportclub-black.126e7e0d.webp" alt="">
+            
+            <input type="checkbox" id="menu-check">
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+        
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/templates/sedes.html">Conocé las sedes</a></li>
+                    <li><a href="/templates/planes.html">Nuestros planes</a></li>
+                    <li><a href="/templates/nosotros.html">Nosotros</a></li>
+                    <li><a href="/templates/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="contpresentacion">
+            <div class="fotos">
+            </div>
+        </section>
+
+        <section>
+            <form action="https://formspree.io/f/xzbnygkr" id="formulario" class="contenedor"  method="post">
+                <div class="titulo">
+                    <h1>Contactanos</h1>
+                </div>
+    
+                <div class="datospers" id="dato_nombre">
+                    <label for="nombre" class="dato_label" required>Nombre</label>
+                    <input type="text" class="dato_input" name="nombre" id="nombre">  
+                </div>
+                
+                <div class="datospers" id="dato_apellido">
+                    <label for="apellido" class="dato_label">Apellido</label>
+                    <input type="text" class="dato_input" name="apellido" id="apellido">   
+                </div>
+                
+                <div class="datospers" id="dato_email">
+                    <label for="e-mail" class="dato_label">E - mail</label>
+                    <input type="email" class="dato_input" name="email" id="email">   
+                </div>
+        
+                <div class="datospers" id="dato_telefono">
+                    <label for="telefono" class="dato_label">Telefono</label>
+                    <input type="text" class="dato_input" name="telefono" id="telefono">   
+                </div>
+        
+                <div class="datospers" id="dato_provincia">
+                    <label for="provincia" class="dato_label">Provincia</label>
+                    <input type="text" class="dato_input" name="provincia" id="provincia">   
+                </div>
+                
+                <div class="subtitulo">
+                    <h2>¿Sos socio?</h2>
+                </div>
+
+                <div class="opcSub">
+                    <input type="radio" id="radioSi" class="form-input socio" name="respuesta" value="si">
+                    <label for="radioSi"  class="form-label">Sí</label>
+                    
+                    <input type="radio" id="radioNo" class="form-input socio" name="respuesta" value="no">
+                    <label for="radioNo"  class="form-label">No</label>
+                </div>
+    
+                <div class="sedes" id="sedes">
+                    <label for="sedes" class="subtLabel">Seleccione sede de interes</label>
+                        <select class="desplegar" name="sedes" id="sedes">
+                            <option value=""></option>
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="San Luis">San Luis</option>
+                        </select>
+                </div>
+    
+                <div class="consulta" id="consulta">
+                    <label for="comentario" class="formLabel">Dejanos tu consulta</label>
+                        
+                    <textarea name="consulta" class="consultas" id="consulta" cols="35" rows="3"></textarea>
+                </div>
+
+                <div class="archivo" id="archivo">
+                    <label for="archivo" class="dato_label">Trabaja con nosotros- adjunta tu CV</label>
+                    <input type="file" class="archivo" name="archivo" id="archivo">   
+
+                </div>
+
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i>Error: Rellena el formulario correctamente. </p>
+                </div>
+    
+                <div class="buttom">
+                    <input type="submit" id="btn" value="Enviar">
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                </div>
+    
+            </form>
+            
+        </section>  
+    </main>
+    <footer></footer> 
+    <script src="/js/formulario.js"></script> 
+    <script src="https://kit.fontawesome.com/0824d6a23d.js" crossorigin="anonymous"></script>
+</body>
+</html>

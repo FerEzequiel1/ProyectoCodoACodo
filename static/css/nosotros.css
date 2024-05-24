@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}  
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: rgb(0, 112, 240);
+}
+
+div.conteiner{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1080;   
+}
+
+header img{
+    width: 16rem; 
+    height: 80%; 
+}
+
+header nav{
+    margin-right: 1rem; 
+    position: absolute;
+    left: 30%;  
+}
+
+header nav ul{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%; 
+   height: 100%; 
+   gap: 2rem;
+}
+
+header nav ul li a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: aliceblue;
+    display: inline-block;    
+}
+
+a{
+    position: relative;
+    text-align: left;
+}
+
+
+header nav ul li {
+    text-decoration: none;
+    list-style-type: none;    
+} 
+
+
+/* menu hamburguesa */
+ 
+ header div.conteiner{
+    place-content: flex-start;
+}
+
+header div.conteiner nav{
+    width: 70%;
+    display: flex;
+    place-content: space-between;
+}
+
+#menu, #menu-check{
+    display: none;
+}
+
+@media only screen and (max-width:900px){
+    header div.conteiner, header div.container ul, header div.container ul li{
+        display: inline;
+    }
+
+    header div.conteiner nav{
+        width: 100%;
+        display: inline;
+    }
+}
+
+@media only screen and (max-width:800px){
+    header h1{
+        margin: 0;
+    }
+
+    header h1 a{
+        padding: 0;
+    }
+
+    header div.conteiner{
+        display: flex;
+        place-content: space-between;
+    }
+
+    #menu-check:not(:checked)~ nav{
+        display: none;
+    }
+
+    #menu-check:checked ~ nav{
+        display: block;
+    }
+
+    #menu{
+        display: block;
+        color:black;
+        background-color: transparent;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid transparent;
+        border-radius: 0.3em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        z-index: 9999;
+    }
+
+    #menu:hover{
+        color: white;
+        background: black;   
+    }
+
+    #menu-cerrar{
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-abrir{
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar{
+        display: block;   
+    }
+
+    header div.conteiner nav{
+        position: absolute;
+        top: 0;
+        right: 50px;
+        height: 100%;
+        background-color:black; 
+        padding-top: 0;
+        padding-right: 1.5em;
+        font-size: 1em;
+        color: white; 
+       
+    }
+
+    header div.conteiner nav ul a{
+        color:white;
+        background: none;
+    }
+
+    a{
+        position: relative;
+        right: 100px;
+        margin: 0;
+        padding-top: 20px;   
+    }
+
+    header div.conteiner nav ul, header div.conteiner nav ul li{
+        display: block;
+        position: relative;
+        text-align: center;  
+    }
+
+} 
+
+
+@font-face {
+    font-family:"Arimo-Italic" ;
+    src: url(../../assets/font/aritmo/Arimo-Italic.ttf);
+
+    font-family:"Roboto-LightItalic" ;
+    src: url(../../assets/font/roboto/Roboto-LightItalic.ttf);
+
+    font-family:"Roboto-MediumItalic" ;
+    src: url(../../assets/font/roboto/Roboto-MediumItalic.ttf);
+
+}
+
+.contTitulo{ 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black; 
+   
+}
+
+.tituloPrincipal{
+    width: 100%;
+    height: 60%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1{
+    padding: 10px;
+    font-size: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: left;    
+}
+
+.slogan{
+    margin: 5px;
+    font-size: 1.5em;
+    color: goldenrod;   
+}
+ 
+
+
+.secContenedor{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding:0;
+    background-color: navajowhite;
+}
+
+.subtitulo{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2{
+    margin: 0;
+    padding: 15px;
+    font-size: 2.5em;
+    font-family: Arimo-Italic;    
+}
+
+.pSubtitulo{
+    padding: 10px;
+    font-size: 0.9em;
+    font-family: Roboto-MediumItalic;
+    text-align: center;
+}
+
+.contCalidadVida{
+    width: 100%;
+    height: 60%; 
+    column-count: 2;       
+}
+
+.calidadVida{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 10px; 
+    transition: all .9s;   
+}
+
+h3{
+    margin: 10px;
+    font-size: 1.3em ;
+    font-family: Roboto-LightItalic;
+    text-align: center;
+}
+
+.calidadVida .nota{
+    font-size: 0.9em;
+    font-family: Roboto-MediumItalic;
+    text-align: center;   
+ }
+
+.calidadVida img{
+    width: 320px;
+    height: 250px;
+   display: block;
+   margin: 0 auto;
+   
+}
+
+
+.secContenedor1{
+    width: 100%;
+    height: 60%;
+    margin: 0;
+    padding: 0;
+    background-color: lightgreen;
+}
+
+.subtitulo{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2{
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 2.5em;
+    font-family: Arimo-Italic;
+    
+}
+
+.pSubtitulo{
+    padding: 10px;
+    font-size: 0.9em;
+    font-family: Roboto-MediumItalic;
+    text-align: center;
+}
+
+.contsustentable{
+    width: 100%;
+    height: 500px;
+   
+}
+
+.cardSustentable{
+    width: 320px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 5px;
+    display: inline-block;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    background-color: grey;
+    transition: all 10s;
+}
+
+.cardSustentable :hover{
+    transform: scale(1.1);
+}
+
+
+img{
+    width: 320px;
+    height: 250px;
+    display: inline;
+}
+
+
+h4{
+    margin: 10px;
+    font-size: 1.3em ;
+    font-family: Roboto-LightItalic;
+    text-align: center;
+}
+
+p{
+    padding: 10px;
+    font-size: 0.8em;
+    font-family: Roboto-MediumItalic;
+    
+}
+
+.contValores{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: black;
+    place-content: space-between;
+}
+
+.valores{
+    font-size: 2.5em;
+    font-family: Arimo-Italic;
+    color:goldenrod;
+    text-align: center;
+}
+
+li{
+    font-size: 0.5em;
+    font-family: Roboto-MediumItalic;
+    color: silver; 
+}
+
+@media only screen and (max-width:800px){
+    .contCalidadVida{
+        column-count: 1;
+    }
+
+}
